@@ -6,16 +6,19 @@ public class App {
 
         // Verweis auf Klassen oder Klassen Großgeschriebenn Variablen klein
 //Referenz von Aussen = unser Name -> REFERENZVARIABLE
-    Cat cat = new Cat("Grizabella", 29); // wir bilden aus einer Klasse ein Objekt    
-        System.out.println(cat.tellYourName());
-        System.out.println(cat.tellYourAge());
+    Cat cat = new Cat("Grizabela", 29); // wir bilden aus einer Klasse ein Objekt    
+    System.out.println(cat.getName());
+       cat.setName("Grizabella"); 
+    System.out.println(cat.getName());
+
+    System.out.println(cat.getAge());
         System.out.println("----------------");
         //   System.out.println("Blick von aussen: " + cat);
     //   cat.tellYourAdress();
 
     Cat cat1 = new Cat( "Alonzo", 35); // wir bilden aus einer Klasse ein Objekt
-     System.out.println(cat1.tellYourName());
-     System.out.println(cat1.tellYourAge());
+     System.out.println(cat1.getName());
+     System.out.println(cat1.getAge());
      System.out.println("----------------");
 
 

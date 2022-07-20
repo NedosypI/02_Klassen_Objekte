@@ -2,9 +2,10 @@ package com.cc.java;
 
 public class Cat {
     
-   public String name; //Object von Typ String
-   public int age;  //Primitive / Ganze Zahlen
-   public char huhu;
+   private String name; //Object von Typ String
+   private int age;  //Primitive / Ganze Zahlen
+
+   // belässt die Klasse bzw. Objekt in cat.java und lässt sich nicht in app.java exportieren
    //immer wenn wir null in der Ausgabe sehen dann wird es eine Objecktreferenz 
 
    // Ein Konstruktor ist immer voraussetzung um ein object zu bilden 
@@ -14,22 +15,24 @@ public class Cat {
     this.age = age;
 }
 
+public String getName() {
+    return name;
+}
+
+public void setName(String name) {
+    this.name = name;
+}
+
+public int getAge() {
+    return age;
+}
+
+public void setAge(int age) {
+    this.age = age;
+}
+
    
-    public void tellYourAdress() {
-        System.out.println("Blick von innen: " + this); //this= Selbstreferenz
-    // //Referenz von innen = das "Ich" = Selbstreferenz -> INSTANZVARIABLE
-    }
 
-
-
-    public String tellYourName() { 
-       return this.name;
-    }
- 
-    public int tellYourAge() {
-        return age;
-
-    }
 
     }
 
