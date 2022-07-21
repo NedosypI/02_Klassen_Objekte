@@ -1,6 +1,6 @@
 package com.cc.java;
 
-public class Cat {
+public class Cat {  // private + public = Zugriffsmodifikatoren => Sichtbarkeit
     
    private String name; //Object von Typ String
    private int age;  //Primitive / Ganze Zahlen
@@ -15,16 +15,28 @@ public class Cat {
     this.age = age;
 }
 
-public String getName() {
-    return name;
-}
 
-public void setName(String name) {
-    this.name = name;
+/* Getter */ // bei privat immer!!!
+
+// getter,setter Methode nennt man auch Kapselung/Encapsulation
+public String getName() {
+    if (getPermission()) {
+        return name;
+   
+    } else {
+        return "Sorry";
+  
+    }
 }
 
 public int getAge() {
     return age;
+}
+
+
+/* Setter */
+public void setName(String name) {
+    this.name = name;
 }
 
 public void setAge(int age) {
@@ -32,7 +44,10 @@ public void setAge(int age) {
 }
 
    
-
+private boolean getPermission() {
+    return false;
+    
+}
 
     }
 
